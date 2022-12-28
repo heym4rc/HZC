@@ -12,7 +12,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding: 0.5rem 1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
@@ -29,4 +29,65 @@ body {
 
 .header-logo {
     width: 2.5rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #15191C;
+    width: 75vw;
+    height: 100vh;
+}
+
+.navbar-logo {
+    align-self: center;
+    width: 7.375rem;
+    padding: 1rem;
+}
+
+.navbar-link {
+    height: 4rem;
+    color: #95999C;
+    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-link-active {
+    color: #FFFFFF;
+    padding-left: 3.5rem;
+    border-left: 0.5rem solid #FFFFFF;
+}
+
+.navbar-link::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 1.5rem;
+}
+
+.navbar-inicio::before {
+    content: "\e902";
+}
+
+.navbar-videos::before {
+    content: "\e90e";
+}
+
+.navbar-picos::before {
+    content: "\e909";
+}
+
+.navbar-integrantes::before {
+    content: "\e903";
+}
+
+.navbar-camisas::before {
+    content: "\e900";
+}
+
+.navbar-pinturas::before {
+    content: "\e90a";
 }
