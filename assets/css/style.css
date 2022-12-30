@@ -3,6 +3,10 @@
     src: url(../font/icones.ttf);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #1D232A;
     font-family: 'Open Sans','icones', sans-serif;
@@ -12,7 +16,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     padding: 0.5rem 1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
@@ -37,6 +41,15 @@ body {
     background-color: #15191C;
     width: 75vw;
     height: 100vh;
+
+    position: absolute;
+    left: -100vw;
+    transition: 0.45s;
+}
+
+.navbar-active {
+    left: 0;
+    transition: 0.45s;
 }
 
 .navbar-logo {
