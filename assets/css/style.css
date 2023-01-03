@@ -11,6 +11,7 @@ body {
   background: #1d232a;
   font-family: "Open Sans", "icones", sans-serif;
   color: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
 
 .header {
@@ -36,19 +37,26 @@ body {
 }
 
 .navbar {
+  background-color: #15191c;
+
   display: flex;
   flex-direction: column;
-  background-color: #15191c;
+
   width: 75vw;
   height: 100vh;
 
   position: absolute;
+  z-index: 1;
+
   left: -100vw;
   transition: 0.45s;
 }
 
 .navbar-active {
+  height: 100vh; 
+
   left: 0;
+
   transition: 0.45s;
 }
 
