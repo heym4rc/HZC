@@ -1,9 +1,14 @@
-// ACTIVE NAVBAR
+// OPEN E CLOSE
 const buttonMenu = document.querySelector('.header-menu')
+const buttonClose = document.querySelector('.close-menu')
 const nav = document.querySelector('.navbar')
 
 buttonMenu.addEventListener('click', () => {
         nav.classList.toggle('navbar-active')
+})
+
+buttonClose.addEventListener('click', function () {
+        nav.classList.remove('navbar-active')
 })
 
 // CLOSE MENU - CLICK ITEM

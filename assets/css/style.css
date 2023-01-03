@@ -42,10 +42,10 @@ body {
   display: flex;
   flex-direction: column;
 
-  width: 75vw;
+  width: 100vw;
   height: 100vh;
 
-  position: absolute;
+  position: fixed;
   z-index: 1;
 
   left: -100vw;
@@ -64,6 +64,16 @@ body {
   align-self: center;
   width: 7.375rem;
   padding: 1rem;
+}
+
+.close-menu {
+  font-size: 1.5rem;
+  
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  cursor: pointer;
 }
 
 .navbar-link {
