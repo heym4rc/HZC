@@ -106,14 +106,15 @@ body {
 }
 
 .principal {
-  padding: 24px 16px;
+  padding: 1.5rem 1rem;
+  display: grid;
+  gap: 1rem;
 }
 
+/*================ FEATURED ================*/
 .title {
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   font-weight: 700;
-
-  margin-bottom: 16px;
 }
 
 .card {
@@ -123,6 +124,10 @@ body {
   border-radius: 15px;
 
   overflow: hidden;
+}
+
+.card-featured {
+  margin-bottom: 1rem;
 }
 
 .card-image {
@@ -138,18 +143,18 @@ body {
 }
 
 .content-card {
-  padding: 16px;
+  padding: 1rem;
+  row-gap: .5rem;
+  column-gap: .5rem;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
 }
 
 .category {
-  font-size: 0.8em;
+  font-size: 0.8rem;
 
   grid-column: span 2;
-
-  margin-bottom: 8px;
 }
 
 .category:hover {
@@ -161,8 +166,6 @@ body {
   font-weight: 700;
 
   grid-column: span 2;
-
-  margin-bottom: 8px;
 }
 
 .heading:hover {
@@ -174,8 +177,6 @@ body {
   font-size: 0.75rem;
 
   grid-column: span 2;
-
-  margin-bottom: 8px;
 }
 
 .name {
@@ -194,50 +195,38 @@ body {
 
   display: flex;
   align-items: center;
-
-  margin-bottom: 8px;
 }
 
 .time::before {
   content: "\e90c";
-  margin-right: 8px;
+  margin-right: 0.25rem;
 
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .views::before {
   content: "\e90f";
-  margin-right: 8px;
+  margin-right: 0.25rem;
 
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .btn {
   background: #0480dc;
 
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 10px;
 
   cursor: pointer;
 
   display: flex;
+  justify-self: flex-end;
   justify-content: center;
   align-items: center;
 
   font-size: 0.9rem;
   text-decoration: none;
-}
-
-.play::before {
-  content: "\e90b";
-  font-size: 24px;
-}
-
-.btn-featured {
-  width: 100%;
-
-  grid-column: span 2;
 
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -248,12 +237,47 @@ body {
     -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
 }
 
-.btn-featured::before {
-  margin-right: 8px;
-}
-
-.btn-featured:hover {
+.btn:hover {
   background: #023f6e;
   -webkit-transform: translate(0, 0.25em);
   transform: translate(0, 0.25em);
+}
+
+.play::before {
+  content: "\e90b";
+  font-size: 1.5rem;
+}
+
+.btn-featured {
+  width: 100%;
+
+  grid-column: span 2;
+}
+
+.btn-featured::before {
+  margin-right: 0.5rem;
+}
+
+/*================ MOST VIEWED ================*/
+.most-viewed {
+  display: grid;
+  gap: 1rem;
+}
+
+.title-section {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/*================ T-SHIRT ================*/
+.currency::before {
+  content: "\e905";
+  margin-right: 0.25rem;
+
+  font-size: 1rem;
+}
+
+.shop::before {
+  content: "\e901";
+  font-size: 1.5rem;
 }
