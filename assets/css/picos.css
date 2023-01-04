@@ -1,0 +1,275 @@
+@font-face {
+  font-family: "icones";
+  src: url(../font/icones.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #1d232a;
+  font-family: "Open Sans", "icones", sans-serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+.header-menu i::before {
+  content: "\e904";
+  font-size: 1.5rem;
+}
+
+.header-notification i::before {
+  content: "\e906";
+  font-size: 1.5rem;
+}
+
+.header-logo {
+  width: 2.5rem;
+}
+
+.navbar {
+  background-color: #15191c;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  z-index: 1;
+
+  left: -100vw;
+  transition: 0.45s;
+}
+
+.navbar-active {
+  height: 100vh;
+
+  left: 0;
+
+  transition: 0.45s;
+}
+
+.navbar-logo {
+  align-self: center;
+  width: 7.375rem;
+  padding: 1rem;
+}
+
+.close-menu {
+  font-size: 1.5rem;
+
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  cursor: pointer;
+}
+
+.navbar-link {
+  height: 4rem;
+  color: #95999c;
+  padding-left: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link-active {
+  color: #ffffff;
+  padding-left: 3.5rem;
+  border-left: 0.5rem solid #ffffff;
+}
+
+.navbar-link::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 1.5rem;
+}
+
+.navbar-inicio::before {
+  content: "\e902";
+}
+
+.navbar-videos::before {
+  content: "\e90e";
+}
+
+.navbar-picos::before {
+  content: "\e909";
+}
+
+.navbar-integrantes::before {
+  content: "\e903";
+}
+
+.navbar-camisas::before {
+  content: "\e900";
+}
+
+.navbar-pinturas::before {
+  content: "\e90a";
+}
+
+.principal {
+  padding: 1.5rem 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+/*================ PICO ================*/
+.title {
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+
+.card {
+  background: #2c343a;
+
+  width: 100%;
+  border-radius: 15px;
+
+  overflow: hidden;
+}
+
+.content-card {
+  padding: 1rem;
+  row-gap: .5rem;
+  column-gap: .5rem;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.category {
+  font-size: 0.8rem;
+
+  grid-column: span 2;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+
+  grid-column: span 2;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.author {
+  color: #95999c;
+  font-size: 0.75rem;
+
+  grid-column: span 2;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+
+.info-card {
+  color: #95999c;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background: #0480dc;
+
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-self: flex-end;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    background 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.btn:hover {
+  background: #023f6e;
+  -webkit-transform: translate(0, 0.25em);
+  transform: translate(0, 0.25em);
+}
+
+.pico::before {
+  content: "\e908";
+  font-size: 1.5rem;
+}
+
+/*================ MOST VIEWED ================*/
+.most-viewed {
+  display: grid;
+  gap: 1rem;
+}
+
+.title-section {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.back-to-top {
+  background: #0480DC;
+  color: #ffffff;
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  padding: 0.8rem;
+  clip-path: circle();
+
+  font-size: 1.5rem;
+  line-height: 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translatey(0);
+}
